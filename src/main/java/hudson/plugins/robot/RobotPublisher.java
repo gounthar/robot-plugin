@@ -15,6 +15,7 @@
  */
 package hudson.plugins.robot;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.EnvVars;
 import hudson.Extension;
 import hudson.FilePath;
@@ -36,7 +37,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import javax.annotation.Nonnull;
 import javax.servlet.ServletException;
 
 import jenkins.tasks.SimpleBuildStep;
@@ -250,7 +250,7 @@ public class RobotPublisher extends Recorder implements Serializable,
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void perform(Run<?, ?> build, @Nonnull FilePath workspace, @Nonnull EnvVars buildEnv, @Nonnull Launcher launcher, @Nonnull TaskListener listener) throws InterruptedException, IOException {
+	public void perform(Run<?, ?> build, @NonNull FilePath workspace, @NonNull EnvVars buildEnv, @NonNull Launcher launcher, @NonNull TaskListener listener) throws InterruptedException, IOException {
 		if (build.getResult() != Result.ABORTED) {
 			PrintStream logger = listener.getLogger();
 			logger.println(Messages.robot_publisher_started());

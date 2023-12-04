@@ -3,8 +3,7 @@ package hudson.plugins.robot;
 import java.util.Set;
 import java.util.logging.Logger;
 
-import javax.annotation.CheckForNull;
-import javax.annotation.Nonnull;
+import edu.umd.cs.findbugs.annotations.CheckForNull;
 
 import org.apache.commons.lang.StringUtils;
 import org.jenkinsci.plugins.workflow.steps.Step;
@@ -15,7 +14,7 @@ import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.DataBoundSetter;
 
 import com.google.common.collect.ImmutableSet;
-
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.FilePath;
 import hudson.Launcher;
@@ -29,7 +28,7 @@ public class RobotStep extends Step {
 	private static final Logger logger = Logger.getLogger(RobotStep.class.getName());
 
 	private @CheckForNull String archiveDirName;
-	private final @Nonnull String outputPath;
+	private final @NonNull String outputPath;
 	private @CheckForNull String reportFileName;
 	private @CheckForNull String logFileName;
 	private @CheckForNull String outputFileName;
