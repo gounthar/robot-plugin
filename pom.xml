@@ -1,9 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.jenkins-ci.plugins</groupId>
-		<artifactId>plugin</artifactId>
-		<version>4.32</version>
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>4.51</version>
+    <relativePath/>
 	</parent>
 
 	<artifactId>robot</artifactId>
@@ -43,7 +44,6 @@
 		<maven-git-code-format.version>1.25</maven-git-code-format.version>
 		<script-security.version>1229.v4880b_b_e905a_6</script-security.version>
 		<blueocean-rest-impl.version>1.25.0</blueocean-rest-impl.version>
-		<java.level>8</java.level>
 	</properties>
 
 	<scm>
@@ -76,7 +76,6 @@
 		<dependency>
 			<groupId>org.jenkins-ci.plugins</groupId>
 			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jenkins-ci.plugins.workflow</groupId>
@@ -119,7 +118,6 @@
 		<dependency>
 			<groupId>org.jenkins-ci.plugins</groupId>
 			<artifactId>token-macro</artifactId>
-			<version>${token-macro.version}</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -131,7 +129,6 @@
 		<dependency>
 			<groupId>org.jenkins-ci.plugins</groupId>
 			<artifactId>script-security</artifactId>
-			<version>${script-security.version}</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
